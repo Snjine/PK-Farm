@@ -1,87 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PK Farm Market Research Plans</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .research-plan {
-            background-color: #e0f7fa;
-            border: 2px solid #00838f;
-        }
-        .financial-plan {
-            background-color: #fff3e0;
-            border: 2px solid #f57c00;
-        }
-        .operational-plan {
-            background-color: #e8f5e9;
-            border: 2px solid #388e3c;
-        }
-        .marketing-plan {
-            background-color: #fffde7;
-            border: 2px solid #fbc02d;
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            margin: 10px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    canvas {
+      border: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="section research-plan">
-        <h2>Research Plan for PK Farm</h2>
-        <p><strong>Objective:</strong> Conduct market research to gather data on consumer preferences, competitor landscape, and opportunities for PK Farm to improve its product offerings and expand market share in Kenya.</p>
-        <p><strong>Research Methodology:</strong> The research will utilize surveys, interviews, focus groups, and field visits.</p>
-        <p><strong>Target Audience:</strong> Consumers (urban & rural), agricultural wholesalers, retail grocery stores, and competitors.</p>
-        <p><strong>Data Collection Methods:</strong> Online surveys, in-person interviews, focus groups, and observations at farmers' markets and trade expos.</p>
-        <p><strong>Timeline:</strong> 5 weeks for completion, with specific phases outlined for planning, data collection, analysis, and presentation.</p>
-    </div>
+  <canvas id="myChart" width="400" height="400"></canvas>
 
-    <div class="section financial-plan">
-        <h2>Financial Plan for Market Research</h2>
-        <p><strong>Estimated Costs:</strong></p>
-        <ul>
-            <li><strong>Survey Tools:</strong> KES 20,000 - 30,000</li>
-            <li><strong>Focus Group Incentives:</strong> KES 10,000 - 15,000 per group</li>
-            <li><strong>Data Analysis Tools (SPSS/Excel):</strong> KES 10,000 - 20,000</li>
-            <li><strong>Transport & Field Expenses:</strong> KES 15,000 - 20,000</li>
-            <li><strong>Research Team Salaries:</strong> KES 50,000 - 70,000</li>
-            <li><strong>Miscellaneous Costs:</strong> KES 5,000 - 10,000</li>
-        </ul>
-        <p><strong>Total Estimated Budget:</strong> KES 170,000 - 245,000</p>
-    </div>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
 
-    <div class="section operational-plan">
-        <h2>Operational Plan for PK Farm Market Research</h2>
-        <p><strong>Research Team:</strong> Project Manager, Data Collection Team, Data Analyst, Communications Specialist</p>
-        <p><strong>Timeline:</strong> The research will span 5 weeks, with tasks broken down into 5 phases: Planning & Design, Data Collection, Data Analysis, Reporting, and Presentation.</p>
-        <p><strong>Key Actions:</strong> The plan includes finalizing tools, distributing surveys, conducting interviews, and analyzing data to create actionable insights.</p>
-        <p><strong>Resources Required:</strong> Survey tools, focus group incentives, transport costs, data analysis software, and research team salaries.</p>
-        <p><strong>Risk Management:</strong> Strategies to address delays in data collection, low response rates, and inadequate data analysis tools.</p>
-    </div>
-
-    <div class="section marketing-plan">
-        <h2>Marketing Plan for PK Farm’s Market Research</h2>
-        <p><strong>Objective:</strong> To use the findings from the market research to raise awareness, attract new customers, and strengthen PK Farm’s position in the market.</p>
-        <p><strong>Target Audience:</strong> Internal stakeholders (management), external stakeholders (customers, suppliers), media, and industry partners.</p>
-        <p><strong>Key Messages:</strong> PK Farm is committed to consumer-driven growth, sustainability, and innovation, using research to improve products and meet customer demands.</p>
-        <p><strong>Marketing Strategies:</strong> Press releases, digital marketing (social media, email), focus group discussions, trade show participation, and paid advertising campaigns.</p>
-        <p><strong>Budget:</strong> Estimated costs for marketing activities range from KES 170,000 to KES 245,000.</p>
-    </div>
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May'],
+        datasets: [{
+          label: 'My First Dataset',
+          data: [12, 19, 3, 5, 2],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
