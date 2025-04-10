@@ -1,65 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kilimo Data Viewer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Market Research Report – PK Farm</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7fa;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 0;
+      background-color: #f8f9fa;
       color: #333;
     }
-
-    h1 {
-      color: #1a8f47;
-      margin-bottom: 20px;
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
-
-    .card {
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-      overflow: auto;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    pre {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      background-color: #f0f0f0;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 14px;
-      line-height: 1.5;
+    h1, h2, h3 {
+      color: #2e7d32;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      margin: 0.5rem 0 1.5rem 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #bbb;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #e8f5e9;
     }
   </style>
 </head>
 <body>
-  <h1>Kilimo Data Viewer</h1>
-  <div class="card">
-    <pre id="output">Loading...</pre>
-  </div>
 
-  <script>
-    fetch('https://statistics.kilimo.go.ke/en/api/apputils/')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
-      })
-      .catch(err => {
-        document.getElementById('output').textContent = 'Error: ' + err;
-      });
-  </script>
+<header>
+  <h1>EcoGrow Dynamics</h1>
+  <h2>Market Research Report – Agricultural Products</h2>
+  <p>April 2025</p>
+</header>
+
+<div class="container">
+
+  <h2>1. Executive Summary</h2>
+  <ul>
+    <li>High demand for cabbages and tomatoes in urban markets.</li>
+    <li>Seasonal price spikes offer revenue opportunities.</li>
+    <li>Wholesalers prefer consistent, bulk deliveries.</li>
+  </ul>
+
+  <h2>2. Objectives</h2>
+  <ul>
+    <li>Identify high-demand crops.</li>
+    <li>Track price trends over the year.</li>
+    <li>Understand competition and buyer expectations.</li>
+    <li>Provide recommendations for market entry and profit growth.</li>
+  </ul>
+
+  <h2>3. Methodology</h2>
+  <ul>
+    <li>15 vendor interviews, 10 wholesalers, 5 retailers.</li>
+    <li>Surveyed Nairobi, Kisumu, Eldoret.</li>
+    <li>Used online and in-person market visits.</li>
+  </ul>
+
+  <h2>4. Market Overview</h2>
+  <ul>
+    <li>Main products: Cabbage, Tomato, Onion, Nightshade, Amaranth.</li>
+    <li>Organic produce gaining traction.</li>
+    <li>Rising interest in pre-packaged and branded produce.</li>
+  </ul>
+
+  <h2>5. Price Trends (Jan–Mar 2025)</h2>
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Min (KES/kg)</th>
+      <th>Max (KES/kg)</th>
+      <th>Avg (KES/kg)</th>
+    </tr>
+    <tr>
+      <td>Cabbage</td>
+      <td>25</td>
+      <td>45</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>Tomato</td>
+      <td>40</td>
+      <td>80</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Onion</td>
+      <td>30</td>
+      <td>55</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>Nightshade</td>
+      <td>50</td>
+      <td>85</td>
+      <td>67</td>
+    </tr>
+  </table>
+
+  <h2>6. Competitor Analysis</h2>
+  <table>
+    <tr>
+      <th>Competitor</th>
+      <th>Strengths</th>
+      <th>Weaknesses</th>
+    </tr>
+    <tr>
+      <td>GreenFarms Ltd</td>
+      <td>Consistent volume supply</td>
+      <td>Higher price point</td>
+    </tr>
+    <tr>
+      <td>Local Vendors</td>
+      <td>Fresh, cheap produce</td>
+      <td>Irregular supply</td>
+    </tr>
+    <tr>
+      <td>Organic Farmers</td>
+      <td>Health-conscious branding</td>
+      <td>Small-scale distribution</td>
+    </tr>
+  </table>
+
+  <h2>7. Stakeholder Feedback</h2>
+  <ul>
+    <li>Retailers want graded, washed produce.</li>
+    <li>Wholesalers prioritize shelf life and transport packaging.</li>
+    <li>Consumers are asking for chemical-free crops.</li>
+  </ul>
+
+  <h2>8. SWOT Analysis</h2>
+  <table>
+    <tr>
+      <th>Strengths</th>
+      <th>Weaknesses</th>
+    </tr>
+    <tr>
+      <td>Fertile soils, strategic location</td>
+      <td>No cold storage</td>
+    </tr>
+    <tr>
+      <th>Opportunities</th>
+      <th>Threats</th>
+    </tr>
+    <tr>
+      <td>Urban demand for organic vegetables</td>
+      <td>Unpredictable weather patterns</td>
+    </tr>
+  </table>
+
+  <h2>9. Recommendations</h2>
+  <ul>
+    <li>Focus on cabbage and tomato supply chains.</li>
+    <li>Improve post-harvest handling with grading and packaging.</li>
+    <li>Explore bulk supply to retailers and restaurants.</li>
+    <li>Consider branding and organic certification.</li>
+  </ul>
+
+  <h2>10. Appendices</h2>
+  <ul>
+    <li>Sample survey form</li>
+    <li>Market visit photos</li>
+    <li>Buyer contact list</li>
+  </ul>
+
+</div>
+
 </body>
-</html>
+  </html>
